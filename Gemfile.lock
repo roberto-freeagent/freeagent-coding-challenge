@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    irb (1.0.0)
+    power_assert (0.2.6)
+    test-unit (3.1.5)
+      power_assert
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  irb
+  test-unit
+
+BUNDLED WITH
+   1.17.3
