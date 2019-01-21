@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/freeagent_coding_challenge'
+require_relative '../config/environments/development'
 require 'pry'
 
 Pry.start
