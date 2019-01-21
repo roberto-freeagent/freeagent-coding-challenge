@@ -7,7 +7,7 @@ class EuroFxImporter < FxImporter
 
     fx_data_hash.each do |date, rates|
       parsed_date = Date.parse(date)
-      calculate_rates(date, from_currency, rates)
+      create_rates(date, from_currency, rates)
     end
   end
 end

@@ -14,7 +14,7 @@ class ExchangeRateCalculator
       invert_rate(rate.rate).round(4)
     else
       from_rate = find_rate(date, BASE_CURRENCY, from_currency)
-      to_rate = find_rate(date, from_currency, base_currency)
+      to_rate = find_rate(date, BASE_CURRENCY, to_currency)
       errors?(from_rate)
       errors?(to_rate)
 
