@@ -3,6 +3,6 @@ class CurrencyExchange
   # Raises an exception if unable to calculate requested rate.
   # Raises an exception if there is no rate for the date provided.
   def self.rate(date, from_currency, to_currency)
-    ExchangeRate.fetch_rate(date, from_currency, to_currency)
+    ExchangeRateCalculator.calculate_rate(date, from_currency, to_currency)
   end
 end
