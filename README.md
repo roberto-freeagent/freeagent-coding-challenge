@@ -21,7 +21,7 @@ bundle exec rake db:create db:migrate RAILS_ENV=test
 
 3. Import the rates
 ```
-bundle exec rake fx:import[./data/eurofxref-hist-90d.json, EUR]
+bundle exec rake 'fx:import[./data/eurofxref-hist-90d.json, EUR]'
 ```
 
 3. Run the tests
@@ -42,7 +42,7 @@ From here we have a Pry session where we can output Exchange Rates
 ```
 ## Your Design Decisions
 
-I've created a sub directory in lib to seperate the importer logic from the rate fetching logic.  For the importer logic, I've followed the strategy pattern, sub-classing a concrete EuroFxImporter from a generic importer class so that it is easy to add importers from different sources in the future.
+I've created a sub directory in lib to seperate the importer logic from the rate fetching logic.  For the importer logic, I've followed the strategy pattern, sub-classing a concrete EuroFxImporter from a generic importer class so that it is easy to add importers from different sources in the future.  To add a new importer, we would just need to create another concrete importer sub-class and also add a new rake task for importing.
 
 I've decided to use a lightweight sqlite3 schema to store historic exchange rates, while also using ActiveRecord for it's very helpful convenience methods.
 
