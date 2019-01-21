@@ -21,7 +21,7 @@ bundle exec rake db:create db:migrate RAILS_ENV=test
 
 3. Import the rates
 ```
-bundle exec rake fx:import
+bundle exec rake fx:import[./data/eurofxref-hist-90d.json, EUR]
 ```
 
 3. Run the tests
